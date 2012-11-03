@@ -22,16 +22,18 @@ public class Solution {
 		if(obstacleGrid == null || obstacleGrid.length == 0 
 				|| obstacleGrid[0].length == 0){
 			return 1;
-		}
-		if(obstacleGrid[0][0] == 1){
-			return 0;
-		}
+		}		
 		
 		int [][] paths = new int[obstacleGrid.length][obstacleGrid[0].length];  
         
-        for(int i = 0;i < paths.length; i++){
+		if(obstacleGrid[0][0] == 0)
+			paths[0][0] = 1;
+		else
+			paths[0][0] = 0;
+		
+        for(int i = 1;i < paths.length; i++){
         	if(obstacleGrid[i][0] == 0){
-        		paths[i][0] = 1;
+        		paths[i][0] = paths[i-1][0];
         	}
         	else{
         		paths[i][0] = 0;
@@ -39,9 +41,9 @@ public class Solution {
         }
         	
         
-        for(int j = 0;j < paths[0].length; j++){
+        for(int j = 1;j < paths[0].length; j++){
         	if(obstacleGrid[0][j] == 0){
-        		paths[0][j] = 1;
+        		paths[0][j] = paths[0][j-1];
         	}
         	else{
         		paths[0][j] = 0;
