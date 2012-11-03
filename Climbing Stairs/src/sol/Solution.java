@@ -17,6 +17,9 @@ public class Solution {
         // Start typing your Java solution below
         // DO NOT write main() function
 		
+		if(n < 0)
+			return 0;
+		
 		int[] ways = new int [n+1];
 		
 		ways[0] = 1;
