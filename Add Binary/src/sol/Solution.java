@@ -2,9 +2,9 @@ package sol;
 
 public class Solution {
 	
-	private static boolean flag;
+	private boolean flag;
 	
-	public static String addBinary(String a, String b) {
+	public String addBinary(String a, String b) {
 		int ap=a.length()-1;
 		int bp = b.length() - 1;
 		StringBuffer sb = new StringBuffer();
@@ -36,7 +36,7 @@ public class Solution {
 		return sb.reverse().toString(); 
 	}
 	
-	public static char add(char a, char b){
+	public char add(char a, char b){
 		if(flag){
 			if(a == '1' && b == '1'){
 				flag = true;
@@ -68,7 +68,7 @@ public class Solution {
 	}
 	
 	public static void main(String args[]){
-		System.out.print(addBinary("11","1"));
+		System.out.print(new Solution().addBinary("11","1"));
 	}
 
 }
