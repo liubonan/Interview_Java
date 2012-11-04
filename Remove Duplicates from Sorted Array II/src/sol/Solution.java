@@ -3,7 +3,8 @@ package sol;
 public class Solution {
 
 	/**
-	 * @param args
+	 * Follow up for "Remove Duplicates": 
+	 * What if duplicates are allowed at most twice?
 	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub

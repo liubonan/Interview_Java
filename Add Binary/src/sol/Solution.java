@@ -1,5 +1,10 @@
 package sol;
 
+/* *
+ * Given two binary strings, return their sum (also a binary string).
+ * 
+ */
+
 public class Solution {
 	
 	private boolean flag;

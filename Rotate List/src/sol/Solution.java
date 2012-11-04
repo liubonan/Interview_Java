@@ -3,7 +3,8 @@ package sol;
 public class Solution {
 
 	/**
-	 * @param args
+	 * Given a list, rotate the list to the right by k 
+	 * places, where k is non-negative.
 	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub

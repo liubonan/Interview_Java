@@ -3,7 +3,8 @@ package sol;
 public class Solution {
 
 	/**
-	 * @param args
+	 * Given a sorted linked list, delete all duplicates 
+	 * such that each element appear only once.
 	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
