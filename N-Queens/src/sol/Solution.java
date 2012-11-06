@@ -17,7 +17,7 @@ public class Solution {
 	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		ArrayList<String[]> r= new Solution().solveNQueens(4);
+		ArrayList<String[]> r= new Solution().solveNQueens(11);
 		//System.out.print(r.size());
 		for(String[] s : r){
 			for(String str : s)
