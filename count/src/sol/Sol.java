@@ -1,5 +1,8 @@
 package sol;
 
+import java.util.Arrays;
+import java.util.Comparator;
+
 public class Sol {
 	
 	public static char[] count_sort(char [] input){
@@ -33,11 +36,23 @@ public class Sol {
 	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		char[] a ={'a','g','h','z','b','g','h'};
-		char[] b = count_sort(a);
-		for(int i=0;i<b.length;i++)
-			System.out.print(b[i]);
+		Character[] a ={'a','g','h','z','b','g','h'};
+		//char[] b = count_sort(a);
+		Arrays.sort(a, new myComparator());
+		for(int i=0;i<a.length;i++)
+			System.out.print(a[i]);
+		
 		
 	}
 
+}
+
+class myComparator implements Comparator{
+	
+
+	@Override
+	public int compare(Object o1, Object o2) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
 }
