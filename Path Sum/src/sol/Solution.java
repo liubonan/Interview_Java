@@ -17,7 +17,7 @@ public class Solution {
 		root.right.left = new TreeNode(6);
 		root.right.right = new TreeNode(7);
 		
-		System.out.println(new Solution().hasPathSum(root, 20));
+		System.out.println(new Solution().hasPathSum(root, 10));
 
 	}
 	
@@ -27,27 +27,28 @@ public class Solution {
 		if(root == null)
 			return false;
 		else{
-			boolean left=false, right=false;
-			if(root.left != null)
-				left = sum(root.left,sum-root.val);
-			if(root.right != null)
-				right = sum(root.right,sum-root.val);
-			return left || right;
+			return sum(root,sum);
 		}
 			
         
     }
 	
 	public boolean sum(TreeNode root, int sum){
-		if(root == null){
-			if (sum == 0)
+		if(root.left == null && root.right == null){
+			if (sum == root.val)
 				return true;
 			else
 				return false;
 		}
 		else{
-			return sum(root.left,sum-root.val) || 
-					sum(root.right,sum-root.val);			
+			boolean l = false;
+			if(root.left != null)
+				l = sum(root.left,sum-root.val);
+			boolean r = false;
+			if(root.right != null)
+				r = sum(root.right,sum-root.val);
+			return  l||r; 
+								
 		}
 	}
 	
