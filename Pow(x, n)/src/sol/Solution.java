@@ -3,7 +3,7 @@ package sol;
 public class Solution {
 
 	/**
-	 * @param args
+	 * Implement pow(x, n).
 	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
