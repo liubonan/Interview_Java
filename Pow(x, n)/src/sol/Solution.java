@@ -26,7 +26,7 @@ public class Solution {
 			neg = false;
 		}
 		else{
-			if(n % 2 == 0){
+			if(neg){
 				return pow(x*(-1),n);
 			}
 			else{

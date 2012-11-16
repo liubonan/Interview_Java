@@ -38,7 +38,7 @@ public class Solution {
 
 		for (int i = 0; i < candidates.length; i++) {
 			ResultSet rs = new ResultSet();
-			rs.add(new ArrayList());
+			rs.add(new ArrayList<Integer>());
 			number_of_ways[i][0] = rs;
 		}
 
