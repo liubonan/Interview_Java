@@ -1,4 +1,4 @@
-package Solution;
+package solution;
 
 import static org.junit.Assert.assertEquals;
 
@@ -13,7 +13,9 @@ public class UnitTests {
 	@Test
     public void thisAlwaysPasses() {
 		Solution sol = new Solution();
-		assertEquals("blue is sky the", sol.reverseWords(" the  sky is blue "));
+		assertEquals(1, sol.climbStairs(1));
+		assertEquals(2, sol.climbStairs(2));
+		assertEquals(3, sol.climbStairs(3));
 
     }
 
