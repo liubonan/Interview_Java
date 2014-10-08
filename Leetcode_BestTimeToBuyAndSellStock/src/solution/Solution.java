@@ -1,31 +1,24 @@
 package solution;
 
 public class Solution {
-	public int maxSubArray(int[] A) {
-        if(A == null || A.length == 0){
+	public int maxProfit(int[] prices) {
+        if(prices == null || prices.length == 0){
         	return 0;
-        }
-        
-        int[] sum = new int[A.length];
-        sum[0] = A[0];
-        
-        for(int i = 1; i < A.length; i++){
-        	sum[i] = sum[i - 1] + A[i];
         }
 
         int result = Integer.MIN_VALUE;
-        int minSum = 0;
+        int minPrice = prices[0];
         
-        for(int i = 0; i < A.length; i++){
-        	if(sum[i] - minSum > result){
-        		result = sum[i] - minSum;
+        for(int i = 1; i < prices.length; i++){
+        	if(prices[i] - minPrice > result){
+        		result = prices[i] - minPrice;
         	}
         	
-        	if(sum[i] < minSum){
-        		minSum = sum[i];
+        	if(prices[i] < minPrice){
+        		minPrice = prices[i];
         	}
         }
         
-        return result;
+        return result > 0? result : 0;
     }
 }

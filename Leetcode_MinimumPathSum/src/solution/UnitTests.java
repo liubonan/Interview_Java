@@ -10,15 +10,16 @@ import org.junit.runners.JUnit4;
 public class UnitTests {
 
 	@Test
-
     public void thisAlwaysPasses() {
 		Solution sol = new Solution();
 		
-		int [] A = new int []{
-				-2,1,-3,4,-1,2,1,-5,4
+		int [][] A = new int [][]{
+				{9,1,9},
+				{9,1,9},
+				{9,1,9}
 		};
 		
 		
-		assertEquals(6, sol.maxSubArray(A));
+		assertEquals(21, sol.minPathSum(A));
     }
 }
