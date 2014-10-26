@@ -8,9 +8,11 @@ public class Solution {
         
         int tank = 0;
         int index = 0;
+        int sum = 0;
         
         for(int i = 0; i < gas.length; i++){
-        	tank += cost[i] - gas[i];
+        	tank += gas[i] - cost[i];
+        	sum += gas[i] - cost[i];
         	if(tank < 0){
         		tank = 0;
         		index = i + 1;
@@ -18,7 +20,7 @@ public class Solution {
         	}
         }
         
-        if(index == gas.length){
+        if(sum < 0){
         	return -1;
         }
         

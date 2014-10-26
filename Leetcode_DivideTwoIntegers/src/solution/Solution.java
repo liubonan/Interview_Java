@@ -9,7 +9,7 @@ public class Solution {
         long divisorLong = Math.abs((long)divisor);
         
         int result = 0;
-        while(dividendLong > divisorLong){
+        while(dividendLong >= divisorLong){
             int shift = 0;
             while(dividendLong >= (divisorLong << (shift + 1))){
             	shift++;
