@@ -12,10 +12,6 @@ public class UnitTests {
 	@Test
     public void thisAlwaysPasses() {
 		Solution sol = new Solution();
-		
-		assertTrue(sol.isMatch("ab", "?*"));
-		assertTrue(sol.isMatch("abcdef", "a?cd*"));
-		assertFalse(sol.isMatch("abcdef", "a?cd*g"));
-		assertFalse(sol.isMatch("aab", "c*a*b"));
+		assertTrue(sol.isScramble("rgtae", "great"));
     }
 }

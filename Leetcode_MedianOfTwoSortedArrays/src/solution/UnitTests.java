@@ -13,9 +13,14 @@ public class UnitTests {
     public void thisAlwaysPasses() {
 		Solution sol = new Solution();
 		
-		assertTrue(sol.isMatch("ab", "?*"));
-		assertTrue(sol.isMatch("abcdef", "a?cd*"));
-		assertFalse(sol.isMatch("abcdef", "a?cd*g"));
-		assertFalse(sol.isMatch("aab", "c*a*b"));
+		int [] A = new int []{
+				1,1,2,3,4
+		};
+		
+		int[] B = new int []{
+				0,1,2,3,4,5
+		};
+		
+		assertEquals(2.0, sol.findMedianSortedArrays(A, B), 0.001);
     }
 }

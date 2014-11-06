@@ -12,10 +12,8 @@ public class UnitTests {
 	@Test
     public void thisAlwaysPasses() {
 		Solution sol = new Solution();
-		
-		assertTrue(sol.isMatch("ab", "?*"));
-		assertTrue(sol.isMatch("abcdef", "a?cd*"));
-		assertFalse(sol.isMatch("abcdef", "a?cd*g"));
-		assertFalse(sol.isMatch("aab", "c*a*b"));
+		System.out.println(sol.findSubstring("barfoothefoobarman", new String[] {"foo", "bar"}));
+		System.out.println(sol.findSubstring("aaa", new String[] {"a", "a"}));
+		System.out.println(sol.findSubstring("abaababbaba", new String[] {"ab","ba","ab","ba"}));
     }
 }
